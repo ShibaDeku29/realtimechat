@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block title %}Thêm dự án mới{% endblock %}
+{% block content %}
+<h2 class="mb-4 text-center animate__animated animate__fadeInDown">Thêm dự án mới</h2>
+<form method="post" class="animate__animated animate__fadeIn">
+    <div class="mb-3">
+        <label class="form-label">Tên dự án</label>
+        <input type="text" name="name" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Mô tả</label>
+        <input type="text" name="description" class="form-control" required>
+    </div>
+    <div class="d-grid">
+        <button type="submit" class="btn btn-custom btn-lg">Tạo dự án</button>
+    </div>
+</form>
+<div class="text-center mt-3">
+    <a href="{{ url_for('index') }}">&#8592; Quay lại trang chủ</a>
+</div>
+{% endblock %}
